@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fitness Score Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Congratulations!</h1>
+    <p class="score">Your Fitness Score: {{ fitness_score }}</p>
+    <!--<p class="score">Your Fitness Score: <span id="fitness-score">90</span></p>-->
+    <img src="static/img/bg.jpg" alt="Fitness Image">
+    <blockquote>
+      "Fitness is not about being better than someone else. It's about being better than you used to be." - Khloe Kardashian
+    </blockquote>
+    <button class="redeem-btn">Redeem Prize</button>
+  </div>
+  <script>
+    const redeemButton = document.querySelector('.redeem-btn');
+
+    redeemButton.addEventListener('click', () => {
+        window.location.href = '/reward';
+    });
+</script>
+  <style>body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+
+  .container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+  h1 {
+    text-align: center;
+    color: #4CAF50;
+  }
+
+  .score {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #4CAF50;
+  }
+
+  #fitness-score {
+    font-size: 48px;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    margin: 20px auto;
+    border-radius: 5px;
+    height: 200px; /* Adjust the height value as needed */
+  }
+
+  blockquote {
+    font-size: 18px;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .redeem-btn {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .redeem-btn:hover {
+    background-color: #45a049;
+  }
+  </style>
+</body>
+</html>
